@@ -1,138 +1,342 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新世紀エヴァンゲリオン | Neon Genesis Evangelion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Tropicália</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class=" p-5">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-jp">NERV</span>
+                <span class="logo-sub">SPECIAL AGENCY</span>
+            </div>
 
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/tim-maia323.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
+            <nav class="nav">
+                <a href="#inicio">Início</a>
+                <a href="#serie">A Série</a>
+                <a href="#personagens">Personagens</a>
+                <a href="#evas">Unidades EVA</a>
+                <a href="#anjos">Anjos</a>
+                <a href="#instrumentalidade">Instrumentalidade</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <div class="acessibilidade">
+                <button id="botao-acessibilidade" class="btn-aces" aria-expanded="false">Acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-aces">
+                    <button id="aumentar-fonte">A+</button>
+                    <button id="diminuir-fonte">A-</button>
+                    <button id="alterna-contraste"><i class="bi bi-circle-half"></i></button>
                 </div>
             </div>
-        </nav>
-       
+        </div>
     </header>
 
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-jp">神の子よ、目覚めよ</p>
+            <h1>NEON GENESIS<br><span>EVANGELION</span></h1>
+            <p class="hero-sub">A humanidade enfrenta o fim. Os Evangelions são a última esperança.</p>
+            <a href="#serie" class="btn-primary">Iniciar Missão</a>
+        </div>
+        <div class="hero-warning">
+            <span>WARNING</span>
+            <span>PATTERN BLUE DETECTED</span>
+        </div>
+    </section>
 
-    <main class="container my-5">
-
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1
-                    <img src="img/" class="mb-3" width="563"
-                    <img src="img/" class="mb-3" width="563"
-                    <img src="img/tim-maia535.jpeg" class="mb-3" width="563"
-                    height="278" loading="lazy">
-                    <a href="#tim-maia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
+    <!-- A SÉRIE -->
+    <section id="serie" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>A Série <span class="jp">／ 新世紀エヴァンゲリオン</span></h2>
+            </div>
+            <div class="serie-grid">
+                <div class="serie-text">
+                    <p>
+                        Em 2015, a humanidade vive sob a ameaça constante dos <strong>Anjos</strong>, seres misteriosos que buscam o retorno a Lilith. 
+                        A organização secreta <strong>NERV</strong>, comandada por Gendo Ikari, desenvolve as Unidades Evangelion — mechas biológicos que só podem ser pilotados por adolescentes selecionados.
+                    </p>
+                    <p>
+                        Criada por <strong>Hideaki Anno</strong> e produzida pelo estúdio Gainax, a série misturou ação mecha com psicologia profunda, 
+                        depressão, traumas e questões existenciais, tornando-se um dos maiores clássicos do anime.
+                    </p>
+                    <div class="info-boxes">
+                        <div class="info-box">
+                            <span>Ano</span>
+                            <strong>1995–1996</strong>
+                        </div>
+                        <div class="info-box">
+                            <span>Episódios</span>
+                            <strong>26 + Filmes</strong>
+                        </div>
+                        <div class="info-box">
+                            <span>Estúdio</span>
+                            <strong>Gainax / Khara</strong>
+                        </div>
+                    </div>
                 </div>
-                <img src="img/tim.maia1.jpg" alt="A imagem apresenta o cantor Tim Maia" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
-
-              </div>
-        </section>
-        <section id="tim-maia" class="my-5 pt-6 secao-tim.maia" tabindex="0" aria-label="Seção explicativa sobre o Tim Maia">
-        <section id="tim-maia" class="my-5 pt-6 secao-tim-maia" tabindex="0" aria-label="Seção explicativa sobre o Tim Maia">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/tim.maia6.jpeg" class="rounded-pill" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>Quem foi Tim Maia?</h2>
-                    <p class="p-2">Tim Maia foi um cantor e compositor brasileiro,
-                     famoso por sua voz marcante e por misturar soul, funk e MPB. Nascido em 1948 no Rio de Janeiro, ele se destacou nos anos 
-                     70 com sucessos como "Me Dê Motivos" e "Gostava Tanto de Você". Conhecido também por sua personalidade excêntrica e comportamento polêmico, Tim Maia se tornou um ícone da música brasileira.
-                     Faleceu em 1998, mas sua obra continua a influenciar a música nacional.</p>
+                <div class="serie-side">
+                    <div class="terminal">
+                        <div class="terminal-header">NERV TERMINAL // STATUS</div>
+                        <pre>
+> Magi System Online
+> Pattern Blue: ACTIVE
+> EVA-01: STANDBY
+> EVA-02: READY
+> EVA-00: DAMAGED
+> Human Instrumentality: 47%
+                        </pre>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
+    <!-- PERSONAGENS -->
+    <section id="personagens" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Personagens <span class="jp">／ キャラクター</span></h2>
+            </div>
+            <div class="chars-grid">
+                <article class="char-card">
+                    <div class="char-img shinji"></div>
+                    <div class="char-info">
+                        <h3>Shinji Ikari</h3>
+                        <span class="role">Terceiro Filho • EVA-01</span>
+                        <p>Piloto relutante, marcado por abandono e baixa autoestima. Carrega o peso de salvar a humanidade enquanto busca aprovação do pai.</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <div class="char-img rei"></div>
+                    <div class="char-info">
+                        <h3>Rei Ayanami</h3>
+                        <span class="role">Primeiro Filho • EVA-00</span>
+                        <p>Enigmática e distante. Sua origem está ligada a Yui Ikari e Lilith. Representa o vazio e a identidade fragmentada.</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <div class="char-img asuka"></div>
+                    <div class="char-info">
+                        <h3>Asuka Langley Soryu</h3>
+                        <span class="role">Segundo Filho • EVA-02</span>
+                        <p>Orgulhosa, competitiva e emocionalmente instável. Usa a arrogância como escudo para esconder profundas feridas.</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <div class="char-img misato"></div>
+                    <div class="char-info">
+                        <h3>Misato Katsuragi</h3>
+                        <span class="role">Capitã da NERV</span>
+                        <p>Responsável operacional e figura maternal conflitante. Sobreviveu ao Segundo Impacto e carrega culpa e desejo de vingança.</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <div class="char-img gendo"></div>
+                    <div class="char-info">
+                        <h3>Gendo Ikari</h3>
+                        <span class="role">Comandante da NERV</span>
+                        <p>Pai frio e calculista. Sua verdadeira motivação é reunir-se com Yui através do Projeto de Instrumentalidade Humana.</p>
+                    </div>
+                </article>
+                <article class="char-card">
+                    <div class="char-img kaworu"></div>
+                    <div class="char-info">
+                        <h3>Kaworu Nagisa</h3>
+                        <span class="role">Quinto Filho • Anjo</span>
+                        <p>O último Anjo. Demonstra afeto genuíno por Shinji e questiona o destino da humanidade e dos Anjos.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/tim.maia2.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/tim.maia3.jpeg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
+    <!-- UNIDADES EVA -->
+    <section id="evas" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Unidades Evangelion <span class="jp">／ エヴァンゲリオン</span></h2>
+            </div>
+            <div class="eva-grid">
+                <div class="eva-card">
+                    <div class="eva-number">01</div>
+                    <h3>EVA-01</h3>
+                    <p class="eva-pilot">Piloto: Shinji Ikari</p>
+                    <p>Unidade de teste. Possui alma de Yui Ikari. É a única capaz de entrar em berserk mode de forma controlada. Cor: roxo e verde.</p>
                 </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/tim.maia4.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/tim.maia5.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
+                <div class="eva-card">
+                    <div class="eva-number">00</div>
+                    <h3>EVA-00</h3>
+                    <p class="eva-pilot">Piloto: Rei Ayanami</p>
+                    <p>Protótipo. Menos estável. Sofreu diversos danos. Cor: laranja (depois branco).</p>
                 </div>
-             </div>
-        </section>
-
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
+                <div class="eva-card">
+                    <div class="eva-number">02</div>
+                    <h3>EVA-02</h3>
+                    <p class="eva-pilot">Piloto: Asuka Langley</p>
+                    <p>Primeira unidade de produção. Projetada para combate real. Cor: vermelho.</p>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+        </div>
+    </section>
+
+    <!-- ANJOS -->
+    <section id="anjos" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Os Anjos <span class="jp">／ 使徒</span></h2>
+            </div>
+            <p class="section-intro">
+                Seres de origem divina que buscam o retorno a Lilith ou Adão. Cada um possui forma, habilidades e padrões de AT Field únicos.
+            </p>
+            <div class="anjos-grid">
+                <div class="anjo-item">
+                    <span class="anjo-num">3º</span>
+                    <strong>Sachiel</strong>
+                    <span>O primeiro Anjo a atacar Tóquio-3</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">4º</span>
+                    <strong>Shamshel</strong>
+                    <span>Forma de inseto com chicotes de energia</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">5º</span>
+                    <strong>Ramiel</strong>
+                    <span>Octaedro de diamante com raio de partículas</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">6º</span>
+                    <strong>Gaghiel</strong>
+                    <span>Anjo aquático de enorme tamanho</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">10º</span>
+                    <strong>Sahaquiel</strong>
+                    <span>Anjo orbital que tenta cair sobre a Terra</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">16º</span>
+                    <strong>Armisael</strong>
+                    <span>Anjo que contamina a EVA-00 e Rei</span>
+                </div>
+                <div class="anjo-item">
+                    <span class="anjo-num">17º</span>
+                    <strong>Tabris</strong>
+                    <span>Kaworu Nagisa — o último Anjo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUMENTALIDADE -->
+    <section id="instrumentalidade" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2>Projeto de Instrumentalidade <span class="jp">／ 人類補完計画</span></h2>
+            </div>
+            <div class="instru-content">
+                <p>
+                    O <strong>Projeto de Instrumentalidade Humana</strong> (Human Instrumentality Project) é o plano secreto de Gendo Ikari e da SEELE 
+                    para forçar a evolução da humanidade. Ao fundir todas as almas em um único ser através do LCL, a dor da individualidade 
+                    desapareceria.
+                </p>
+                <p>
+                    O processo envolve o Terceiro Impacto, a ativação de Lilith e o uso das Unidades Evangelion como catalisadores. 
+                    O final da série e os filmes exploram se a humanidade deve aceitar essa união ou escolher continuar existindo como indivíduos, 
+                    mesmo com todo o sofrimento que isso implica.
+                </p>
+                <blockquote>
+                    “Você deve viver, mesmo que seja doloroso.”
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2>Galeria <span class="jp">／ ギャラリー</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder">EVA-01</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder">Rei Ayanami</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder">Asuka</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder">NERV HQ</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder">Ramiel</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder">End of Evangelion</div>
+                </div>
+            </div>
+            <p class="gallery-note">Substitua os placeholders por suas imagens na pasta <code>img/</code></p>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2>Contato <span class="jp">／ コンタクト</span></h2>
+            </div>
+            <div class="form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome / 名前</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem / メッセージ</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Transmissão</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-logo">NERV</p>
+            <p>Site não oficial • Fã project • Sem fins comerciais</p>
+            <p class="footer-jp">神の子よ、目覚めよ</p>
+        </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
-  
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
