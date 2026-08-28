@@ -6,11 +6,342 @@
     <title>Augusto Cury | O Brasil tem cura. O Brasil tem Cury.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ESTILO VISUAL MODERNO -->
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-alt: #111827;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #818cf8;
+            --border: rgba(255, 255, 255, 0.1);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .container.narrow {
+            max-width: 680px;
+        }
+
+        /* Topo / Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-header {
+            background: var(--text-main);
+            color: var(--bg-dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Banner Principal / Hero */
+        .hero {
+            position: relative;
+            padding: 180px 0 100px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(129, 140, 248, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 999px;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-ghost {
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        /* Seções */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background-color: var(--bg-alt);
+        }
+
+        .section-intro {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-intro.center {
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+        }
+
+        .section-intro h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Bento Grid */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .bento-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .bento-item.large { grid-column: span 2; }
+        .bento-item.wide { grid-column: span 3; }
+
+        .num {
+            font-size: 2.5rem;
+            font-weight: 900;
+            opacity: 0.15;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        /* Linha do Tempo / Trajetória */
+        .journey {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .journey-item {
+            display: flex;
+            gap: 2rem;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .journey-item.highlight {
+            border-color: var(--primary);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .journey-item .year {
+            font-weight: 800;
+            color: var(--primary);
+            min-width: 100px;
+            font-size: 1.2rem;
+        }
+
+        /* Grids gerais (Formação / Propostas) */
+        .creds, .props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cred, .prop {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .cred-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Chamada final / CTA */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--bg-alt);
+        }
+
+        .cta h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Formulário */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .field input, .field textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .btn-primary.full {
+            width: 100%;
+        }
+
+        /* Rodapé */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        /* Adaptação para celular */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; height: auto; padding: 1rem; gap: 1rem; }
+            .nav a { margin: 0 0.5rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .bento { grid-template-columns: 1fr; }
+            .bento-item.large, .bento-item.wide { grid-column: span 1; }
+            .journey-item { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <div class="container header-inner">
             <div class="logo">AUGUSTO <span>CURY</span></div>
@@ -19,7 +350,6 @@
                 <a href="#trajetoria">Trajetória</a>
                 <a href="#formacao">Formação</a>
                 <a href="#propostas">Propostas</a>
-                <a href="#contato">Contato</a>
             </nav>
             <a href="#contato" class="btn-header">Quero apoiar</a>
         </div>
@@ -27,95 +357,99 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <p class="hero-label">Candidato à Presidência da República • 2026</p>
-            <h1>O Brasil tem cura.<br><span>O Brasil tem Cury.</span></h1>
-            <p class="hero-sub">
-                Psiquiatra, professor e o escritor mais lido do Brasil.  
-                Uma trajetória de 40 anos dedicada a entender a mente humana  
-                para agora curar o país.
-            </p>
-            <div class="hero-buttons">
-                <a href="#por-que" class="btn-primary">Por que ele é o mais apto</a>
-                <a href="#trajetoria" class="btn-secondary">Conheça a trajetória</a>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Candidato à Presidência • 2026</div>
+                <h1>
+                    O Brasil tem cura.<br>
+                    <span class="gradient-text">O Brasil tem Cury.</span>
+                </h1>
+                <p class="hero-sub">
+                    Psiquiatra. Professor. O escritor mais lido do Brasil.<br>
+                    40 anos estudando a mente humana para agora cuidar do país.
+                </p>
+                <div class="hero-actions">
+                    <a href="#por-que" class="btn-primary">Por que ele é o mais apto</a>
+                    <a href="#trajetoria" class="btn-ghost">Ver trajetória →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- POR QUE CURY -->
+    <!-- POR QUE -->
     <section id="por-que" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="tag">O DIAGNÓSTICO</span>
-                <h2>O Brasil não precisa de mais um político.<br>Precisa de alguém que entenda a mente humana.</h2>
+            <div class="section-intro">
+                <span class="eyebrow">O DIAGNÓSTICO</span>
+                <h2>O Brasil não precisa de mais um político.<br><span>Precisa de alguém que entenda a mente humana.</span></h2>
             </div>
 
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-number">01</div>
+            <div class="bento">
+                <div class="bento-item large">
+                    <span class="num">01</span>
                     <h3>Formação que nenhum outro candidato tem</h3>
                     <p>Médico psiquiatra com décadas de experiência clínica. Enquanto a maioria discute ideologia, Cury passou a vida estudando o que realmente move o ser humano: emoção, trauma, ansiedade e propósito.</p>
                 </div>
-                <div class="reason-card">
-                    <div class="reason-number">02</div>
+                <div class="bento-item">
+                    <span class="num">02</span>
                     <h3>O escritor que formou gerações</h3>
-                    <p>Mais de 40 milhões de livros vendidos. Obras traduzidas em dezenas de países. Professor de pós-graduação. Ele não fala de inteligência emocional — ele a ensinou para milhões de brasileiros.</p>
+                    <p>Mais de 40 milhões de livros vendidos. Obras em dezenas de países. Ele não fala de inteligência emocional — ele a ensinou para milhões.</p>
                 </div>
-                <div class="reason-card">
-                    <div class="reason-number">03</div>
-                    <h3>Fora do sistema político tradicional</h3>
-                    <p>Nunca ocupou cargo eletivo. Não deve favores. Não tem histórico de barganha. Entra na política por inconformismo, não por carreira. Um único mandato. Sem reeleição.</p>
+                <div class="bento-item">
+                    <span class="num">03</span>
+                    <h3>Fora do sistema</h3>
+                    <p>Nunca ocupou cargo eletivo. Não deve favores. Entra por inconformismo, não por carreira. Um único mandato.</p>
                 </div>
-                <div class="reason-card">
-                    <div class="reason-number">04</div>
-                    <h3>O único que fala de saúde mental como prioridade nacional</h3>
-                    <p>O Brasil vive uma epidemia silenciosa de ansiedade, depressão e esgotamento. Cury é o único candidato que transforma isso em política pública de Estado.</p>
+                <div class="bento-item wide">
+                    <span class="num">04</span>
+                    <h3>O único que trata saúde mental como prioridade nacional</h3>
+                    <p>O Brasil vive uma epidemia de ansiedade e esgotamento. Cury é o único candidato que transforma isso em política de Estado de verdade.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TRAJETÓRIA -->
-    <section id="trajetoria" class="section section-dark">
+    <section id="trajetoria" class="section section-alt">
         <div class="container">
-            <div class="section-header light">
-                <span class="tag">TRAJETÓRIA</span>
-                <h2>De Colina (SP) para o mundo.<br>Agora para o Brasil.</h2>
+            <div class="section-intro">
+                <span class="eyebrow">TRAJETÓRIA</span>
+                <h2>De Colina para o mundo.<br>Agora para o Brasil.</h2>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1958</div>
-                    <div class="timeline-content">
+            <div class="journey">
+                <div class="journey-item">
+                    <div class="year">1958</div>
+                    <div class="content">
                         <h3>Nascimento em Colina – SP</h3>
-                        <p>Infância humilde. Família de oito pessoas em um pequeno quarto. A dor da escassez viraria combustível para entender a mente humana.</p>
+                        <p>Infância humilde. Família de oito pessoas em um pequeno quarto. A dor da escassez virou combustível para entender a mente humana.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">1984</div>
-                    <div class="timeline-content">
+                <div class="journey-item">
+                    <div class="year">1984</div>
+                    <div class="content">
                         <h3>Formação em Medicina</h3>
-                        <p>Graduado pela Faculdade de Medicina de São José do Rio Preto (FAMERP). Especialização em Psiquiatria. Pós-graduação na PUC-SP.</p>
+                        <p>Graduado pela FAMERP. Especialização em Psiquiatria. Pós-graduação na PUC-SP. A base científica que nenhum outro candidato possui.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">1990s–hoje</div>
-                    <div class="timeline-content">
+                <div class="journey-item">
+                    <div class="year">1990 →</div>
+                    <div class="content">
                         <h3>O escritor que mudou gerações</h3>
-                        <p>Mais de 40 milhões de livros vendidos. Publicações em mais de 70 países. Obras como “O Vendedor de Sonhos”, “Ansiedade – O Mal do Século” e “O Homem Mais Inteligente da História” se tornaram referência nacional.</p>
+                        <p>Mais de 40 milhões de livros. Publicações em mais de 70 países. “O Vendedor de Sonhos”, “Ansiedade” e tantas outras obras se tornaram referência nacional.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">Professor</div>
-                    <div class="timeline-content">
+                <div class="journey-item">
+                    <div class="year">Professor</div>
+                    <div class="content">
                         <h3>Formador de mentes</h3>
-                        <p>Professor de pós-graduação. Criador de programas de inteligência multifocal e prevenção de transtornos psíquicos. Décadas ensinando gestores, professores e jovens a pensarem melhor.</p>
+                        <p>Professor de pós-graduação. Criador de programas de inteligência multifocal. Décadas ensinando gestores, professores e jovens a pensarem melhor.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2026</div>
-                    <div class="timeline-content">
+                <div class="journey-item highlight">
+                    <div class="year">2026</div>
+                    <div class="content">
                         <h3>A decisão de curar o país</h3>
                         <p>Entra na política pela primeira e única vez. Não por ambição de poder, mas porque “pior do que a ação dos maus é a omissão dos bons”.</p>
                     </div>
@@ -127,113 +461,138 @@
     <!-- FORMAÇÃO -->
     <section id="formacao" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="tag">FORMAÇÃO</span>
-                <h2>Não é discurso.<br>É currículo.</h2>
+            <div class="section-intro">
+                <span class="eyebrow">FORMAÇÃO</span>
+                <h2>Não é discurso.<br><span class="gradient-text">É currículo.</span></h2>
             </div>
 
-            <div class="formation-grid">
-                <div class="formation-card">
+            <div class="creds">
+                <div class="cred">
+                    <div class="cred-icon">⚕</div>
                     <h3>Médico Psiquiatra</h3>
-                    <p>Formado em Medicina. Especialista em Psiquiatria. Décadas de prática clínica. Enquanto outros candidatos falam de “saúde mental”, Cury a estudou e tratou por 40 anos.</p>
+                    <p>Formado em Medicina. Especialista em Psiquiatria. Décadas de prática clínica. Enquanto outros falam de saúde mental, Cury a estudou e tratou por 40 anos.</p>
                 </div>
-                <div class="formation-card">
-                    <h3>Professor de Pós-Graduação</h3>
-                    <p>Formou profissionais e líderes. Desenvolveu metodologias de inteligência emocional e multifocal aplicadas em escolas e empresas.</p>
-                </div>
-                <div class="formation-card">
+                <div class="cred">
+                    <div class="cred-icon">📚</div>
                     <h3>Escritor best-seller mundial</h3>
-                    <p>Mais de 40 milhões de livros. Traduzido em dezenas de idiomas. Considerado um dos autores mais lidos do Brasil nas últimas décadas.</p>
+                    <p>Mais de 40 milhões de livros. Traduzido em dezenas de idiomas. Um dos autores mais lidos do Brasil nas últimas décadas.</p>
                 </div>
-                <div class="formation-card">
+                <div class="cred">
+                    <div class="cred-icon">🎓</div>
+                    <h3>Professor de Pós-Graduação</h3>
+                    <p>Formou profissionais e líderes. Desenvolveu metodologias de inteligência emocional aplicadas em escolas e empresas.</p>
+                </div>
+                <div class="cred">
+                    <div class="cred-icon">🔬</div>
                     <h3>Pesquisador</h3>
-                    <p>Doutorado internacional. Criador do Programa Freemind. Trabalho científico focado em prevenção de transtornos psíquicos em escala global.</p>
+                    <p>Doutorado internacional. Criador do Programa Freemind. Trabalho científico focado em prevenção de transtornos psíquicos.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROPOSTAS -->
-    <section id="propostas" class="section section-dark">
+    <section id="propostas" class="section section-alt">
         <div class="container">
-            <div class="section-header light">
-                <span class="tag">PROPOSTAS</span>
+            <div class="section-intro">
+                <span class="eyebrow">PROPOSTAS</span>
                 <h2>O que o Brasil precisa ouvir</h2>
             </div>
 
-            <div class="proposals-grid">
-                <div class="proposal-card">
+            <div class="props">
+                <div class="prop">
                     <h3>Saúde Mental como Política de Estado</h3>
-                    <p>Programas nacionais de prevenção de ansiedade e depressão nas escolas e empresas. Formação de professores e gestores em inteligência emocional.</p>
+                    <p>Programas nacionais de prevenção nas escolas e empresas. Formação de professores e gestores em inteligência emocional.</p>
                 </div>
-                <div class="proposal-card">
+                <div class="prop">
                     <h3>Semipresidencialismo</h3>
-                    <p>Presidente com visão estratégica + primeiro-ministro para a gestão do dia a dia. Reduzir a concentração de poder e a polarização.</p>
+                    <p>Presidente com visão estratégica + primeiro-ministro para a gestão do dia a dia. Menos concentração de poder.</p>
                 </div>
-                <div class="proposal-card">
+                <div class="prop">
                     <h3>Educação que forma mentes</h3>
-                    <p>Reengenharia das escolas. Professores valorizados. Ensino de pensamento crítico, empreendedorismo e saúde emocional desde cedo.</p>
+                    <p>Reengenharia das escolas. Professores valorizados. Ensino de pensamento crítico e saúde emocional.</p>
                 </div>
-                <div class="proposal-card">
-                    <h3>Time de Ouro sem corrupção</h3>
-                    <p>Chamar os melhores gestores, economistas e governadores com histórico limpo. Governo técnico e ético, não de barganha.</p>
+                <div class="prop">
+                    <h3>Time de Ouro</h3>
+                    <p>Os melhores gestores e economistas com histórico limpo. Governo técnico e ético, não de barganha.</p>
                 </div>
-                <div class="proposal-card">
+                <div class="prop">
                     <h3>Empreendedorismo real</h3>
-                    <p>Estímulo massivo à iniciativa privada, redução da burocracia e programas de empreendedorismo nas comunidades.</p>
+                    <p>Estímulo massivo à iniciativa privada e redução da burocracia. Programas nas comunidades.</p>
                 </div>
-                <div class="proposal-card">
+                <div class="prop">
                     <h3>Um único mandato</h3>
-                    <p>Não quer reeleição. Não quer fazer carreira política. Quer entregar o Brasil melhor e sair.</p>
+                    <p>Não quer reeleição. Não quer carreira política. Quer entregar o Brasil melhor e sair.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FRASE FINAL -->
-    <section class="cta-section">
+    <!-- CTA -->
+    <section class="cta">
         <div class="container">
-            <h2>O Brasil tem cura.<br>O Brasil tem Cury.</h2>
-            <p>Psiquiatra. Professor. Escritor. A trajetória que o país precisa na Presidência.</p>
-            <a href="#contato" class="btn-primary large">Faça parte dessa cura</a>
+            <h2>O Brasil tem cura.<br><span class="gradient-text">O Brasil tem Cury.</span></h2>
+            <p>Psiquiatra. Professor. Escritor.<br>A trajetória que o país precisa na Presidência.</p>
+            <a href="#contato" class="btn-primary">Faça parte dessa cura</a>
         </div>
     </section>
 
     <!-- CONTATO -->
     <section id="contato" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="tag">CONTATO</span>
+        <div class="container narrow">
+            <div class="section-intro center">
+                <span class="eyebrow">CONTATO</span>
                 <h2>Junte-se a essa jornada</h2>
             </div>
-            <div class="form-wrapper">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label>Nome</label>
-                        <input type="text" placeholder="Seu nome completo" required>
-                    </div>
-                    <div class="form-group">
-                        <label>E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Mensagem</label>
-                        <textarea rows="4" placeholder="Como você quer contribuir?"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar</button>
-                </form>
-            </div>
+            <form class="form">
+                <div class="field">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome completo" required>
+                </div>
+                <div class="field">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="field">
+                    <label>Mensagem</label>
+                    <textarea rows="4" placeholder="Como você quer contribuir?"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full">Enviar mensagem</button>
+            </form>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-slogan">O Brasil tem cura. O Brasil tem Cury.</p>
-            <p>Site de apoio independente • Eleições 2026</p>
+            <p class="footer-brand">O Brasil tem cura. O Brasil tem Cury.</p>
+            <p class="footer-note">Site de apoio independente • Eleições 2026</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- INTERATIVIDADE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Rolagem suave ao clicar nos menus
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Alerta ao enviar o formulário
+            const form = document.querySelector('.form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Obrigado pelo seu apoio! Mensagem enviada.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
