@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Augusto Cury | O Brasil tem cura. O Brasil tem Cury.</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-
+    
     <!-- ESTILO VISUAL MODERNO -->
     <style>
         :root {
@@ -217,8 +218,13 @@
             position: relative;
         }
 
-        .bento-item.large { grid-column: span 2; }
-        .bento-item.wide { grid-column: span 3; }
+        .bento-item.large {
+            grid-column: span 2;
+        }
+
+        .bento-item.wide {
+            grid-column: span 3;
+        }
 
         .num {
             font-size: 2.5rem;
@@ -332,16 +338,38 @@
 
         /* Adaptação para celular */
         @media (max-width: 768px) {
-            .header-inner { flex-direction: column; height: auto; padding: 1rem; gap: 1rem; }
-            .nav a { margin: 0 0.5rem; }
-            .hero h1 { font-size: 2.2rem; }
-            .bento { grid-template-columns: 1fr; }
-            .bento-item.large, .bento-item.wide { grid-column: span 1; }
-            .journey-item { flex-direction: column; gap: 0.5rem; }
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .nav a {
+                margin: 0 0.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .bento {
+                grid-template-columns: 1fr;
+            }
+            
+            .bento-item.large, .bento-item.wide {
+                grid-column: span 1;
+            }
+            
+            .journey-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="container header-inner">
             <div class="logo">AUGUSTO <span>CURY</span></div>
@@ -384,23 +412,26 @@
                 <span class="eyebrow">O DIAGNÓSTICO</span>
                 <h2>O Brasil não precisa de mais um político.<br><span>Precisa de alguém que entenda a mente humana.</span></h2>
             </div>
-
+            
             <div class="bento">
                 <div class="bento-item large">
                     <span class="num">01</span>
                     <h3>Formação que nenhum outro candidato tem</h3>
                     <p>Médico psiquiatra com décadas de experiência clínica. Enquanto a maioria discute ideologia, Cury passou a vida estudando o que realmente move o ser humano: emoção, trauma, ansiedade e propósito.</p>
                 </div>
+                
                 <div class="bento-item">
                     <span class="num">02</span>
                     <h3>O escritor que formou gerações</h3>
                     <p>Mais de 40 milhões de livros vendidos. Obras em dezenas de países. Ele não fala de inteligência emocional — ele a ensinou para milhões.</p>
                 </div>
+                
                 <div class="bento-item">
                     <span class="num">03</span>
                     <h3>Fora do sistema</h3>
                     <p>Nunca ocupou cargo eletivo. Não deve favores. Entra por inconformismo, não por carreira. Um único mandato.</p>
                 </div>
+                
                 <div class="bento-item wide">
                     <span class="num">04</span>
                     <h3>O único que trata saúde mental como prioridade nacional</h3>
@@ -417,7 +448,7 @@
                 <span class="eyebrow">TRAJETÓRIA</span>
                 <h2>De Colina para o mundo.<br>Agora para o Brasil.</h2>
             </div>
-
+            
             <div class="journey">
                 <div class="journey-item">
                     <div class="year">1958</div>
@@ -426,6 +457,7 @@
                         <p>Infância humilde. Família de oito pessoas em um pequeno quarto. A dor da escassez virou combustível para entender a mente humana.</p>
                     </div>
                 </div>
+                
                 <div class="journey-item">
                     <div class="year">1984</div>
                     <div class="content">
@@ -433,6 +465,7 @@
                         <p>Graduado pela FAMERP. Especialização em Psiquiatria. Pós-graduação na PUC-SP. A base científica que nenhum outro candidato possui.</p>
                     </div>
                 </div>
+                
                 <div class="journey-item">
                     <div class="year">1990 →</div>
                     <div class="content">
@@ -440,6 +473,7 @@
                         <p>Mais de 40 milhões de livros. Publicações em mais de 70 países. “O Vendedor de Sonhos”, “Ansiedade” e tantas outras obras se tornaram referência nacional.</p>
                     </div>
                 </div>
+                
                 <div class="journey-item">
                     <div class="year">Professor</div>
                     <div class="content">
@@ -447,6 +481,7 @@
                         <p>Professor de pós-graduação. Criador de programas de inteligência multifocal. Décadas ensinando gestores, professores e jovens a pensarem melhor.</p>
                     </div>
                 </div>
+                
                 <div class="journey-item highlight">
                     <div class="year">2026</div>
                     <div class="content">
@@ -465,23 +500,26 @@
                 <span class="eyebrow">FORMAÇÃO</span>
                 <h2>Não é discurso.<br><span class="gradient-text">É currículo.</span></h2>
             </div>
-
+            
             <div class="creds">
                 <div class="cred">
                     <div class="cred-icon">⚕</div>
                     <h3>Médico Psiquiatra</h3>
                     <p>Formado em Medicina. Especialista em Psiquiatria. Décadas de prática clínica. Enquanto outros falam de saúde mental, Cury a estudou e tratou por 40 anos.</p>
                 </div>
+                
                 <div class="cred">
                     <div class="cred-icon">📚</div>
                     <h3>Escritor best-seller mundial</h3>
                     <p>Mais de 40 milhões de livros. Traduzido em dezenas de idiomas. Um dos autores mais lidos do Brasil nas últimas décadas.</p>
                 </div>
+                
                 <div class="cred">
                     <div class="cred-icon">🎓</div>
                     <h3>Professor de Pós-Graduação</h3>
                     <p>Formou profissionais e líderes. Desenvolveu metodologias de inteligência emocional aplicadas em escolas e empresas.</p>
                 </div>
+                
                 <div class="cred">
                     <div class="cred-icon">🔬</div>
                     <h3>Pesquisador</h3>
@@ -498,28 +536,33 @@
                 <span class="eyebrow">PROPOSTAS</span>
                 <h2>O que o Brasil precisa ouvir</h2>
             </div>
-
+            
             <div class="props">
                 <div class="prop">
                     <h3>Saúde Mental como Política de Estado</h3>
                     <p>Programas nacionais de prevenção nas escolas e empresas. Formação de professores e gestores em inteligência emocional.</p>
                 </div>
+                
                 <div class="prop">
                     <h3>Semipresidencialismo</h3>
                     <p>Presidente com visão estratégica + primeiro-ministro para a gestão do dia a dia. Menos concentração de poder.</p>
                 </div>
+                
                 <div class="prop">
                     <h3>Educação que forma mentes</h3>
                     <p>Reengenharia das escolas. Professores valorizados. Ensino de pensamento crítico e saúde emocional.</p>
                 </div>
+                
                 <div class="prop">
                     <h3>Time de Ouro</h3>
                     <p>Os melhores gestores e economistas com histórico limpo. Governo técnico e ético, não de barganha.</p>
                 </div>
+                
                 <div class="prop">
                     <h3>Empreendedorismo real</h3>
                     <p>Estímulo massivo à iniciativa privada e redução da burocracia. Programas nas comunidades.</p>
                 </div>
+                
                 <div class="prop">
                     <h3>Um único mandato</h3>
                     <p>Não quer reeleição. Não quer carreira política. Quer entregar o Brasil melhor e sair.</p>
@@ -544,19 +587,23 @@
                 <span class="eyebrow">CONTATO</span>
                 <h2>Junte-se a essa jornada</h2>
             </div>
+            
             <form class="form">
                 <div class="field">
                     <label>Nome</label>
                     <input type="text" placeholder="Seu nome completo" required>
                 </div>
+                
                 <div class="field">
                     <label>E-mail</label>
                     <input type="email" placeholder="seu@email.com" required>
                 </div>
+                
                 <div class="field">
                     <label>Mensagem</label>
                     <textarea rows="4" placeholder="Como você quer contribuir?"></textarea>
                 </div>
+                
                 <button type="submit" class="btn-primary full">Enviar mensagem</button>
             </form>
         </div>
@@ -578,7 +625,10 @@
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
                 });
             });
