@@ -203,6 +203,29 @@
             margin-top: 0.5rem;
         }
 
+        /* Galeria de Fotos */
+        .galeria-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .galeria-container img {
+            width: 100%;
+            max-width: 320px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-container img:hover {
+            transform: translateY(-5px);
+        }
+
         /* Bento Grid */
         .bento {
             display: grid;
@@ -375,6 +398,7 @@
             <div class="logo">AUGUSTO <span>CURY</span></div>
             <nav class="nav">
                 <a href="#por-que">Por que Cury</a>
+                <a href="#galeria">Galeria</a>
                 <a href="#trajetoria">Trajetória</a>
                 <a href="#formacao">Formação</a>
                 <a href="#propostas">Propostas</a>
@@ -401,6 +425,23 @@
                     <a href="#por-que" class="btn-primary">Por que ele é o mais apto</a>
                     <a href="#trajetoria" class="btn-ghost">Ver trajetória →</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria" class="section section-alt">
+        <div class="container">
+            <div class="section-intro center">
+                <span class="eyebrow">FOTOS E REGISTROS</span>
+                <h2>Galeria de Imagens</h2>
+            </div>
+            <div class="galeria-container">
+                <img src="img/142-IMG_5265-683x1024-1.jpg" alt="Augusto Cury 1">
+                <img src="img/augusto-cury.png" alt="Augusto Cury 2">
+                <img src="img/Augusto-Cury-site-palestras-de-sucesso.jpg" alt="Augusto Cury Palestras">
+                <img src="img/imagens.jfif" alt="Augusto Cury 3">
+                <img src="img/Seleção de Frases de Augusto Cury_ _ Enchei-vos do Espírito Santo de Deus ___.jfif" alt="Frases Augusto Cury">
             </div>
         </div>
     </section>
@@ -644,10 +685,5 @@
             }
         });
     </script>
-<img src="img/142-IMG_5265-683x1024-1.jpg" alt="Augusto Cury 1">
-  <img src="img/augusto-cury.png" alt="Augusto Cury 2">
-  <img src="img/Augusto-Cury-site-palestras-de-sucesso.jpg" alt="Augusto Cury Palestras">
-  <img src="img/imagens.jfif" alt="Augusto Cury 3">
-  <img src="img/Seleção de Frases de Augusto Cury_ _ Enchei-vos do Espírito Santo de Deus ___.jfif" alt="Frases Augusto Cury">
 </body>
 </html>
